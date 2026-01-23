@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
           <div className="flex-1 text-center lg:text-left">
             <div className="mb-6 inline-flex items-center space-x-2 rounded-full bg-orange-100 px-4 py-1.5 text-sm font-bold text-orange-600">
               <Zap className="h-4 w-4" />
-              <span>Partner IT Terpercaya Jakarta Selatan</span>
+              <span>Partner IT Terpercaya dan Handal</span>
             </div>
             
             <h1 className="mb-6 text-4xl font-extrabold leading-tight text-slate-900 md:text-6xl">
