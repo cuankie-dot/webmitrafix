@@ -49,7 +49,7 @@ const About: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Visi Kami</h4>
-                  <p className="text-sm text-slate-500">Menjadi pusat solusi IT nomor satu di Jakarta yang mengutamakan kepuasan pelanggan melalui teknologi tepat guna.</p>
+                  <p className="text-sm text-slate-500">Menjadi pusat solusi IT nomor satu di Indonesia khususnya area JABODETABEK yang mengutamakan kepuasan pelanggan melalui teknologi tepat guna.</p>
                 </div>
               </div>
 
