@@ -4,6 +4,14 @@ import { ChevronRight, ShieldCheck, Zap, Globe } from 'lucide-react';
 import { SERVICES, SERVICE_ICONS } from '../constants';
 
 const Hero: React.FC = () => {
+  const scrollToServices = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('services');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="relative pt-32 pb-16 lg:pt-48 lg:pb-24 overflow-hidden">
       {/* Background Decor */}
@@ -15,7 +23,7 @@ const Hero: React.FC = () => {
           <div className="flex-1 text-center lg:text-left">
             <div className="mb-6 inline-flex items-center space-x-2 rounded-full bg-orange-100 px-4 py-1.5 text-sm font-bold text-orange-600">
               <Zap className="h-4 w-4" />
-              <span>Partner IT Terpercaya dan Handal</span>
+              <span>Partner IT Terpercaya Jakarta Selatan</span>
             </div>
             
             <h1 className="mb-6 text-4xl font-extrabold leading-tight text-slate-900 md:text-6xl">
@@ -40,6 +48,7 @@ const Hero: React.FC = () => {
               </a>
               <a 
                 href="#services" 
+                onClick={scrollToServices}
                 className="w-full rounded-xl border border-slate-200 bg-white px-8 py-4 text-lg font-bold text-slate-900 transition-all hover:bg-slate-50 sm:w-auto"
               >
                 Lihat Layanan
@@ -53,7 +62,7 @@ const Hero: React.FC = () => {
               </div>
               <div className="flex items-center gap-2 text-sm font-medium">
                 <Globe className="h-5 w-5 text-blue-500" />
-                <span>Support Area Seluruh Indonesia</span>
+                <span>Support Area Jabodetabek</span>
               </div>
             </div>
           </div>
@@ -91,7 +100,8 @@ const Hero: React.FC = () => {
             <a 
               key={service.id}
               href="#services"
-              className="group rounded-2xl border border-white bg-white/80 p-5 backdrop-blur-md transition-all hover:border-mitrafix-orange hover:shadow-lg hover:shadow-orange-500/10"
+              onClick={scrollToServices}
+              className="group rounded-2xl border border-white bg-white/80 p-5 backdrop-blur-md transition-all hover:border-mitrafix-orange hover:shadow-lg hover:shadow-orange-500/10 cursor-pointer"
             >
               <div className="mb-3 text-mitrafix-orange transition-transform duration-300 group-hover:scale-110">
                 {React.cloneElement(SERVICE_ICONS[service.icon] as React.ReactElement<any>, { className: 'w-6 h-6' })}
