@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ChevronRight, ShieldCheck, Zap, Globe } from 'lucide-react';
 import { SERVICES, SERVICE_ICONS } from '../constants';
